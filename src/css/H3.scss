@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+.H3{
+  grid-column: 2 / 8;
+  grid-row: 4 / 5;
+  
+  h3{
+    @include h3;
+
+    &::after{
+      content: "";
+      border-bottom: 1px solid grey;
+      display: block;
+      position: relative;
+      bottom: 8px;
+      width: 60%;
+    }
+  }
+}

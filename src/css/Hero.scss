@@ -1,0 +1,49 @@
+@import '../css/variables.scss';
+
+.Hero{
+  z-index: 2;
+  user-select: none;
+  grid-column: 2 / 8;
+  grid-row: 2 / 4;
+  display: flex;
+  transition: all .5s ease-in-out;
+  animation: fadeInLeft 1.3s ease 0s forwards;
+
+  h1{
+    @include h1;
+  }
+
+  .letter-l{
+    animation: rotate 1.8s ease 0s forwards;
+  }
+
+  .letter-k{
+    transition: all .5s ease-in-out;
+    mix-blend-mode: color;
+  }
+
+  .letter-k:hover{
+    transform: scale(1.1);
+  }
+
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-40%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: translateX(-40%) rotate(0deg);
+    }
+    100% {
+      transform: translateX(0%) rotate(-30deg);
+    }
+  }
+
+}

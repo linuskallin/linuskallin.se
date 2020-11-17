@@ -1,0 +1,8 @@
+@import './variables.scss';
+
+.App{
+  display: grid;
+  grid-template-columns: 10.75% 10.75% 10.75% 10.75% 10.75% 10.75% 10.75% 10.75% ;
+  grid-template-rows: 120px auto auto auto auto auto auto auto;
+  gap: 2% 2%;
+}

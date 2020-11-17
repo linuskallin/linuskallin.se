@@ -1,0 +1,28 @@
+@import './variables.scss';
+
+.CV{
+  z-index: -1;
+  grid-column: 5 / 8;
+  grid-row: 3 / 4;
+  animation: fadeInRight 1.9s ease 0s forwards;
+  
+  h2{
+    @include h2;
+    transition: all .5s ease-in-out;
+  }
+
+  h2:hover{
+    transform: scale(1.1);
+  }
+
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(40%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+}

@@ -1,0 +1,20 @@
+@import './variables.scss';
+
+.Header{
+  
+  grid-column: 2 / 8;
+  align-self: center;
+
+
+  h5{
+    @include h5;
+    
+  }
+  
+  h5::after{
+    content: "";
+    border-bottom: 1px solid grey;
+    display: block;
+    width: 30%;
+  }
+}
