@@ -3,11 +3,10 @@
 .CV{
   z-index: -1;
   grid-column: 5 / 8;
-  grid-row: 3 / 4;
+  grid-row: 2 / 3;
   animation: fadeInRight 1.9s ease 0s forwards;
   
   h2{
-    @include h2;
     transition: all .5s ease-in-out;
   }
 

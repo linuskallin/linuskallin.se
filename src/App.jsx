@@ -1,31 +1,42 @@
+import React from 'react';
 import './css/App.scss';
-import content from './content.json'
+import content from './content.js'
 import Header from './components/Header'
 import Hero from './components/Hero'
 import CV from './components/CV'
 import Dots from './components/Dots'
 import Logo from './components/Logo'
-import H3 from './components/H3'
+import Title from './components/Title'
 import Text from './components/Text'
 import Img from './components/Img'
-
-console.log(content.texts.linus.position);
-let arr = []
-Object.keys(content).forEach(function(key){
-  arr.push(content[key])
-})
+import { ObserverProvider } from './components/ObserverContext'
 
 function App() {
+
   return (
     <div className="App">
-      <Dots />
       <Header />
       <Logo />
       <Hero />
       <CV />
-      <H3 title="Linus"/>
+      <ObserverProvider>
+        <Dots />
+      </ObserverProvider>
+      <ObserverProvider>
+        <Title {...content.texts.linus}/>
+      </ObserverProvider>
       <Text {...content.texts.linus}/>
       <Img {...content.images.linus}/>
+      <ObserverProvider>
+        <Title {...content.texts.programmering}/>
+      </ObserverProvider>
+      <Text {...content.texts.programmering}/>
+      <Img {...content.images.programmering}/>
+      <ObserverProvider>
+        <Title {...content.texts.design}/>
+      </ObserverProvider>
+      <Text {...content.texts.design}/>
+      <Img {...content.images.design}/>
     </div>
   );
 }
