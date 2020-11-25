@@ -5,8 +5,7 @@ export const ObserverContext = createContext();
 
 export const ObserverProvider = (props) => {
   const {ref, inView, entry} = useInView({
-    threshold: 0,
-    rootMargin: "250px"
+    threshold: 0.5,
   });
 
   return (
